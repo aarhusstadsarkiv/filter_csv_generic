@@ -1,5 +1,3 @@
-import operator
-
 def id_field_contains(fieldname: str, content: str) -> bool:
 
     fieldname = fieldname.split(";")[1]
@@ -39,6 +37,7 @@ def greater_than(fieldname: str, content: str) -> bool:
     else:
         return int(fieldname) > int(content)
 
+
 def less_than(fieldname: str, content: str) -> bool:
 
     fieldname = fieldname.split(";")[0]
@@ -47,4 +46,3 @@ def less_than(fieldname: str, content: str) -> bool:
         return False
     else:
         return int(fieldname) < int(content)
-

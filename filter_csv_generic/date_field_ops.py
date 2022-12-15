@@ -1,6 +1,3 @@
-import datetime as dt
-
-
 def equal_to(datefield: str, filter: str) -> bool:
 
     return datefield == filter
