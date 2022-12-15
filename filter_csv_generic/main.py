@@ -54,6 +54,9 @@ def main(args=None):
 
     args = parser.parse_args(args)
 
+
+    print("path:", args.csv_path)
+
     input_dir = Path(args.csv_path)
     output_dir = Path(args.output_path)
 
