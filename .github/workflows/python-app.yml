@@ -37,7 +37,7 @@ jobs:
     
     - name: Test with pytest
       run: |
-        pytest
+        pwd && pytest .
     - name: Test and generate coverage report
       run: |
         pytest --cov-report=xml --cov=byte-header-comparer tests/
