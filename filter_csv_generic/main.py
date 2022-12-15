@@ -5,11 +5,6 @@ import argparse
 from . import settings
 
 
-def hasID(idstring: str, id: str) -> bool:
-    _id = idstring.split(";")[0]
-    return _id == id
-
-
 def main(args=None):
     # output: dict[str, dict[str, str]] = {}
     output: list[tuple[int, int, int]] = []
