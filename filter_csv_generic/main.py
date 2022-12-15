@@ -63,6 +63,7 @@ def main(args=None):
     import os
     print("cwd:", os.getcwd())
     print("dir:", os.listdir("."))
+    print("dir:", os.listdir(os.listdir(".")[0]))
 
     print("path:", input_dir)
 
