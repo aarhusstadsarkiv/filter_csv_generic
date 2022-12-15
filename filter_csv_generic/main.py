@@ -35,13 +35,13 @@ def main(args=None):
     parser.add_argument(
         "csv_path",
         metavar="input_dir",
-        type=Path,
+        type=str,
         help="Path to the backup database csv file.",
     )
     parser.add_argument(
         "output_path",
         metavar="output_dir",
-        type=Path,
+        type=str,
         help="Path to the output/result directory for csv file(s).",
     )
     parser.add_argument(
