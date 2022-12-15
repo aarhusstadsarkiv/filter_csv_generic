@@ -1,9 +1,9 @@
-from . import id_field_ops
-from . import id_field_list_ops
-from . import date_field_ops
-from . import string_ops
-from . import dict_field_ops
-from . import string_list_ops
+import id_field_ops
+import id_field_list_ops
+import date_field_ops
+import string_ops
+import dict_field_ops
+import string_list_ops
 
 OPERATORS_ID_FIELD: dict = {
     "equalTo": id_field_ops.equal_to,

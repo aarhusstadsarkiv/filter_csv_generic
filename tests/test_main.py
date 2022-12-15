@@ -114,6 +114,50 @@ def test_OPERATORS_ID_FIELD_LIST_contains_two_filters(capfd):
     assert out.__contains__("1") and err == ""
 
 
+def test_OPERATORS_ID_FIELD_LIST_greaterThan(capfd):
+
+    csv_path = "./tests/test_data/testdata.csv"
+
+    test_path_output = "./tests/test_data/"
+
+    args = [
+        csv_path,
+        test_path_output,
+        "--filter",
+        "curators",
+        "greaterThan",
+        "1",
+    ]
+
+    main.main(args)
+
+    out, err = capfd.readouterr()
+
+    assert out.__contains__("2") and err == ""
+
+
+def test_OPERATORS_ID_FIELD_LIST_lessThan(capfd):
+
+    csv_path = "./tests/test_data/testdata.csv"
+
+    test_path_output = "./tests/test_data/"
+
+    args = [
+        csv_path,
+        test_path_output,
+        "--filter",
+        "curators",
+        "lessThan",
+        "2",
+    ]
+
+    main.main(args)
+
+    out, err = capfd.readouterr()
+
+    assert out.__contains__("12") and err == ""
+
+
 # --------OPERATORS_DATE_FIELD---------------------------------------------------------------------------
 
 

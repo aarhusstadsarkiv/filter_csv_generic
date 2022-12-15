@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 import csv
 import argparse
-from . import settings
+from settings import FIELDS
 
 
 def main(args=None):
@@ -49,9 +49,6 @@ def main(args=None):
 
     args = parser.parse_args(args)
 
-
-    print("path:", args.csv_path)
-
     input_dir = Path(args.csv_path)
     output_dir = Path(args.output_path)
 
@@ -79,7 +76,7 @@ def main(args=None):
 
                 fieldname: str = args.filter[i][0]
                 operator_key = args.filter[i][1]
-                operator = settings.FIELDS[fieldname][operator_key]
+                operator = FIELDS[fieldname][operator_key]
                 value = args.filter[i][2]
 
                 if not _dict.get(fieldname):
