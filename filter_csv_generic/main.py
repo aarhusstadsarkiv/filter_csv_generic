@@ -60,6 +60,8 @@ def main(args=None):
     input_dir = Path(args.csv_path)
     output_dir = Path(args.output_path)
 
+    print("path:", input_dir)
+
     print("Starting filtering process...")
     # print(input_dir)
     # print(output_dir)
