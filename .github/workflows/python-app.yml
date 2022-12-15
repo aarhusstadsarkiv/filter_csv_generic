@@ -42,9 +42,10 @@ jobs:
         pwd && pytest .
     - name: Test and generate coverage report
       run: |
-        pytest --cov-report=xml --cov=filter_csv_generic tests/
+        pytest --cov-report=xml --cov filter_csv_generic/tests/
     - name: Upload to codecov
-      uses: codecov/codecov-action@v2
+      uses: codecov/codecov-action@v3
       with:
           token: ${{ secrets.CODECOV_TOKEN }}
           fail_ci_if_error: true
+          verbose: true # optional (default = false)
